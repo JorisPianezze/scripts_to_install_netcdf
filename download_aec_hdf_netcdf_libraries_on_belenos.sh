@@ -39,9 +39,10 @@ fi
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #   Download netcdf-c-${version_netcdf_c}
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-if [[ ! -e v${version_netcdf_c}.tar.gz ]]
+if [[ ! -e netcdf-c-${version_netcdf_c}.tar.gz ]]
 then
   wget --no-check-certificate https://github.com/Unidata/netcdf-c/archive/refs/tags/v${version_netcdf_c}.tar.gz
+  mv v${version_netcdf_c}.tar.gz netcdf-c-${version_netcdf_c}.tar.gz
 else
   echo 'netcdf-c-'${version_netcdf_c}' already downloaded'
 fi
@@ -49,9 +50,10 @@ fi
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #   Download netcdf-fortran-${version_netcdf_fortran}
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-if [[ ! -e v${version_netcdf_fortran}.tar.gz ]]
+if [[ ! -e netcdf-fortran-${version_netcdf_fortran}.tar.gz ]]
 then
   wget --no-check-certificate https://github.com/Unidata/netcdf-fortran/archive/refs/tags/v${version_netcdf_fortran}.tar.gz
+  mv v${version_netcdf_fortran}.tar.gz netcdf-fortran-${version_netcdf_fortran}.tar.gz
 else
   echo 'netcdf-fortran-'${version_netcdf_fortran}' already downloaded'
 fi
