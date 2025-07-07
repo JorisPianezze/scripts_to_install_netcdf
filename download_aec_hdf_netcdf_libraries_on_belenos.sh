@@ -31,7 +31,7 @@ fi
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 if [[ ! -e hdf5-${version_hdf5}.tar.gz ]]
 then
-  wget --no-check-certificate https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-${version_hdf5:0:4}/hdf5-${version_hdf5}/src/hdf5-${version_hdf5}.tar.gz
+  wget --no-check-certificate https://github.com/HDFGroup/hdf5/releases/download/hdf5_${version_hdf5}/hdf5-${version_hdf5}.tar.gz
 else
   echo 'hdf5-'${version_hdf5}' already downloaded'
 fi
